@@ -1,13 +1,18 @@
-body, header, h1, h2, ul{
+body,
+header,
+h1,
+h2,
+ul {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #e4e4e4;
 }
 
-body > header, body > footer{
+body > header,
+body > footer {
     background-color: rgb(54, 54, 54);
     color: white;
     text-align: center;
@@ -15,15 +20,15 @@ body > header, body > footer{
     font-family: 'Courier New', Courier, monospace;
 }
 
-nav{
+nav {
     margin: 0 5%;
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     width: 45%;
     text-align: center;
@@ -31,11 +36,11 @@ nav ul li{
     margin: 10px 0 0;
 }
 
-nav ul li:nth-child(odd){
+nav ul li :nth-child(odd) {
     margin-right: 10%;
 }
 
-nav ul li a{
+nav ul li a {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
@@ -45,46 +50,47 @@ nav ul li a{
     padding: 5px 0;
 }
 
-nav ul li a:hover{
+nav ul li a :hover {
     color: rgb(219, 69, 83);
 }
 
-main{
+main {
     margin: 20px 5% 0;
 }
 
-article{
+article {
     background-color: white;
     border: 1px solid #cacaca;
     margin-bottom: 20px;
 }
 
-article header div{
+article header div {
     height: 200px;
     text-align: center;
 }
 
-article header div img{
+article header div img {
     max-height: 100%;
     max-width: 100%;
 }
 
-article header h2, article header p{
+article header h2,
+article header p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 0 5%;
 }
 
-article section p{
+article section p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0 5%;
 }
 
-article footer{
+article footer {
     padding: 20px 5% 5%;
     text-align: right;
 }
 
-article footer a{
+article footer a {
     color: black;
     background-color: #cacaca;
     padding: 5px 10px;
@@ -93,68 +99,69 @@ article footer a{
     border-radius: 5px;
 }
 
-article footer a:hover{
+article footer a :hover{
     color: rgb(219, 69, 83);
 }
 
-aside{
+aside {
     background-color: white;
     border: 1px solid #cacaca;
     margin: 0 5% 20px;
     box-sizing: border-box;
 }
 
-aside section{
+aside section {
     padding: 20px 5%;
 }
 
-aside section h2{
+aside section h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-bottom: 15px;
 }
 
-aside section ul{
+aside section ul {
     list-style-type: none;
 }
 
-aside section ul li{
+aside section ul li {
     margin-bottom: 10px;
 }
 
-aside section ul li img{
+aside section ul li img {
     width: 50px;
     float: left;
     margin-right: 10px;
 }
 
-aside section ul li a{
+aside section ul li a {
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
 
-aside section ul li a:hover{
+aside section ul li a :hover {
     color: rgb(219, 69, 83);
 }
 
 @media screen and (min-width: 768px) {
-    main, aside{
+    main,
+    aside {
         display: inline-block;
         vertical-align: top;
     }
-    main{
+    main {
         width: 50%;
         margin: 20px 5% 0;
     }
-    aside{
+    aside {
         width: 25%;
         margin: 20px 5% 0 0;
     }
-    nav ul li{
+    nav ul li {
         width: 19%;
     }
-    nav ul li:not(:last-child){
+    nav ul li :not(:last-child) {
         margin-right: 6%;
     }
 }
