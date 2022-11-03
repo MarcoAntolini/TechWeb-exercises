@@ -1,4 +1,7 @@
-/* Alcuni margin sono in pixel per renderlo più simile possibile all'immagine data. */
+/*
+Alcuni margin sono in pixel per renderlo più simile possibile all'immagine data.
+Anche i padding nelle media query per rendere il nav responsive più agevolmente.
+*/
 
 html {
    font-family: monospace;
@@ -45,7 +48,8 @@ nav:hover {
 nav > ul {
     list-style: square;
     text-align: left;
-    line-height: 200%;   
+    line-height: 200%;
+    list-style-position: inside;
 }
 
 nav > ul > li > a:hover {
@@ -78,4 +82,24 @@ footer > p {
     color: purple;
     text-align: center;
     font-size: 80%;
+}
+
+@media only screen and (max-width: 660px) {
+    nav > ul {
+        padding-left: 30px;
+        line-height: 180%;
+    }
+    nav > ul > li {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    nav > ul {
+        padding-left: 20px;
+        line-height: 150%;
+    }
+    nav > ul > li {
+        font-size: 70%;
+    }
 }
