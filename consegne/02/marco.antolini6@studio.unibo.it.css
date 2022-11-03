@@ -1,0 +1,85 @@
+html {
+   font-family: monospace;
+   font-size: 100%;
+}
+
+header {
+    background-image: linear-gradient(to top left, purple, pink, yellow, pink);
+    margin: 1px 0 5px;
+    padding: 1% 0;
+    border-bottom: purple solid 3px;
+}
+
+header > h1 {
+    color: purple;
+    text-align: right;    
+}
+
+nav,
+aside,
+section {
+    display: inline-block;
+}
+
+section {
+    float: right;
+    width: 50%;
+    margin: 1% 2%;
+}
+
+section > p {
+    text-align: left;
+    color: black;
+}
+
+nav {
+    float: left;
+    width: 15%;
+    margin: 0 2% 0 1%;
+    padding: 0.5% 1%;
+    background-image: linear-gradient(to top left, purple, pink, yellow, pink);
+    border-top: purple solid 3px;
+    border-bottom: purple solid 3px;
+}
+
+nav:hover {
+    background-image: linear-gradient(to top left, pink, yellow, pink, purple);
+}
+
+nav > ul {
+    list-style: square;
+    text-align: left;
+    line-height: 200%;   
+}
+
+nav > ul > li > a:hover {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    padding: 1%;
+}
+
+aside {
+    float: center;
+    width: 20%;
+    margin: 1% 0 0 3%;
+}
+
+aside > p {
+    color: purple;
+}
+
+footer {
+    clear: both;
+    background-image: linear-gradient(to top left, pink, yellow, pink, purple);
+    border-top: purple solid 3px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1% 0;
+}
+
+footer > p {
+    color: purple;
+    text-align: center;
+    font-size: 80%;
+}
