@@ -15,16 +15,10 @@ header > h1 {
     text-align: right;    
 }
 
-nav,
-aside,
-section {
-    display: inline-block;
-}
-
 section {
     float: right;
     width: 50%;
-    margin: 1% 2%;
+    margin: 15px 2%;
 }
 
 section > p {
@@ -60,9 +54,9 @@ nav > ul > li > a:hover {
 }
 
 aside {
-    float: center;
+    float: none;
     width: 20%;
-    margin: 1% 0 0 3%;
+    margin: 35px 30% 0 23%;
 }
 
 aside > p {
