@@ -1,6 +1,5 @@
 /*
 Alcuni margin sono in pixel per renderlo più simile possibile all'immagine data.
-Anche i padding nelle media query per rendere il nav responsive più agevolmente.
 */
 
 html {
@@ -83,6 +82,11 @@ footer > p {
     text-align: center;
     font-size: 80%;
 }
+
+/*
+La parte seguente l'ho aggiunta anche se non richiesta per rendere responsive il nav (altrimenti il testo al suo interno sarebbe uscito dal contenitore).
+Anche qui i padding sono in pixel per rendere il tutto più agevole e fare in modo che il resizing avvenga meglio.
+*/
 
 @media only screen and (max-width: 660px) {
     nav > ul {
