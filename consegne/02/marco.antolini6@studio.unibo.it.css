@@ -22,7 +22,7 @@ header > h1 {
 section {
     float: right;
     width: 50%;
-    margin: 15px 2%;
+    margin: 15px 2% 0 0;
 }
 
 section > p {
@@ -138,7 +138,7 @@ Ho quindi optato per questa opzione di rendere il nav sticky in cima alla pagina
     aside {
         order: 3;
         flex-basis: 30%;
-        margin: 15px 2% 0 10px;
+        margin: 15px 6% 0 2%;
     }
     section {
         order: 4;
