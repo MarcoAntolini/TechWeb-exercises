@@ -22,7 +22,7 @@ header > h1 {
 section {
     float: right;
     width: 50%;
-    margin: 15px 2% 0 0;
+    margin: 15px 2% 15px 0;
 }
 
 section > p {
