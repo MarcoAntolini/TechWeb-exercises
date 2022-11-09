@@ -9,6 +9,7 @@ html {
 
 header {
     background-image: linear-gradient(to top left, purple, pink, yellow, pink);
+    width: 100%;
     margin: 1px 0 5px;
     padding: 1% 0;
     border-bottom: 3px solid purple;
@@ -124,11 +125,9 @@ Ho quindi optato per questa opzione di rendere il nav sticky in cima alla pagina
         flex: 1;
     }
     header {
-        order: 1;
         width: 100%;
     }
     nav {
-        order: 2;
         position: sticky;
         top: 10px;
         width: 95%;
@@ -136,15 +135,32 @@ Ho quindi optato per questa opzione di rendere il nav sticky in cima alla pagina
         box-shadow: 0 -10px 0 0 white;
     }
     aside {
-        order: 3;
         flex-basis: 30%;
         margin: 15px 6% 0 2%;
     }
     section {
-        order: 4;
         flex-basis: 60%;
     }
-    footer {
-        order: 5;
+    footer,
+    section {
+        order: 1;
+    }
+}
+
+/* 
+Ho aggiunto un tag meta al file html per testare le media query anche in caso di risoluzione mobile.
+*/
+
+@media only screen and (max-width: 480px) {
+    aside,
+    section {
+        flex-basis: 100%;
+    }
+    aside {
+        margin-right: 2%;
+    }
+    section {
+        margin-top: 0;
+        margin-left: 2%;
     }
 }
