@@ -1,12 +1,12 @@
 1) HTML (HyperText Markup Language):
 E' un linguaggio di markup utilizzato per dare formato e impaginare i documenti ipertestuali, principalmente per pagine web.
-E' un linguaggio open source, la sua sintassi è stabilita da W3C (World Wide Web Consortium).
+E' un linguaggio open source, la sua sintassi è stabilita dal W3C (World Wide Web Consortium).
 Deve la sua origine e il suo sviluppo alla necessità di avere uno standard che funzionasse in qualsiasi browser (anche mobile) e che includesse anche funzionalità prima disponibili solo tramite estensioni del browser.
 
 2) URI (Uniform Resource Identifier):
 E' l'identificatore globale (composto da una sequenza di caratteri) ed univoco che ha ogni risorsa.
 Esempi più comuni sono ad esempio gli URL (Uniform Resource Locator, cioè indirizzi web), indirizzi di posta elettronica, numeri di telefono inclusivi di prefisso, o un semplice documento.
-Più specificatamente gli URI possono essere URL o URN (Uniform Resource Name) a seconda che definiscano posizioni o nomi.
+Più specificamente gli URI possono essere URL o URN (Uniform Resource Name) a seconda che definiscano posizioni o nomi.
 
 3) HTTP (HyperText Transfer Protocol):
-E' un protocollo di comunicazione che permette di scambiare informazioni sul web in un'interazione tra client e server (nella maggior parte dei caso secondo il modello TCP/IP).
+E' un protocollo di comunicazione che permette di scambiare informazioni sul web tramite un'interazione tra client e server (nella maggior parte dei casi secondo il modello TCP/IP).
