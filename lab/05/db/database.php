@@ -5,7 +5,7 @@ class DatabaseHelper{
     public function __construct($servername, $username, $password, $dbname, $port){
         $this->db = new mysqli($servername, $username, $password, $dbname, $port);
         if ($this->db->connect_error) {
-            die("Connection failed: " . $db->connect_error);
+            die("Connection failed: " . $this->db->connect_error);
         }        
     }
 
@@ -80,7 +80,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function getPostByAuthorId($id){
+    public function getPostsByAuthorId($id){
         $query = "SELECT idarticolo, titoloarticolo, imgarticolo FROM articolo WHERE autore=?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$id);
