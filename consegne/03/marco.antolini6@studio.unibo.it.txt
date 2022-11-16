@@ -5,8 +5,9 @@ Deve la sua origine e il suo sviluppo alla necessità di avere uno standard che 
 
 2) URI (Uniform Resource Identifier):
 E' l'identificatore globale (composto da una sequenza di caratteri) ed univoco che ha ogni risorsa.
-Esempi più comuni sono ad esempio gli URL (Uniform Resource Locator, cioè indirizzi web), indirizzi di posta elettronica, numeri di telefono inclusivi di prefisso, o un semplice documento.
-Più specificamente gli URI possono essere URL o URN (Uniform Resource Name) a seconda che definiscano posizioni o nomi.
+Esempi più comuni possono essere gli URL (Uniform Resource Locator, cioè indirizzi web), indirizzi di posta elettronica, numeri di telefono inclusivi di prefisso, o un semplice documento.
+In modo più specifico, gli URI possono essere URL o URN (Uniform Resource Name) a seconda del fatto che definiscano posizioni o nomi.
 
 3) HTTP (HyperText Transfer Protocol):
 E' un protocollo di comunicazione che permette di scambiare informazioni sul web tramite un'interazione tra client e server (nella maggior parte dei casi secondo il modello TCP/IP).
+Esiste una ulteriore versione di HTTP chiamata HTTPS (Hypertext Transfer Protocol Secure) che si differenzia per la protezione della comunicazione che mette in atto tramite certificati.
