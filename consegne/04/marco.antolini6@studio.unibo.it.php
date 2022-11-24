@@ -6,7 +6,7 @@ if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
 
-function getCount($db, $var)
+function getSetCount($db, $var)
 {
     $query = $db->prepare("SELECT COUNT(*) FROM insiemi WHERE insieme = ?");
     $query->bind_param('i', $var);
@@ -19,10 +19,10 @@ function checkValidity($db)
     if (!isset($_GET['A'], $_GET['B'], $_GET['O'])) {
         return false;
     }
-    if (getCount($db, $_GET['A']) == 0) {
+    if (getSetCount($db, $_GET['A']) == 0) {
         return false;
     }
-    if (getCount($db, $_GET['B']) == 0) {
+    if (getSetCount($db, $_GET['B']) == 0) {
         return false;
     }
     if (($_GET['O'] != 'i') or ($_GET['O'] != 'u')) {
@@ -33,7 +33,7 @@ function checkValidity($db)
 
 function initArray($db, $var)
 {
-    $query = $db->prepare("SELECT * FROM insiemi WHERE insieme = ?");
+    $query = $db->prepare("SELECT valore FROM insiemi WHERE insieme = ?");
     $query->bind_param('i', $var);
     $query->execute();
     return $query->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -41,13 +41,39 @@ function initArray($db, $var)
 
 function createNewArray($db)
 {
+    $A = initArray($db, $_GET['A']);
+    $B = initArray($db, $_GET['B']);
+    $result = array();
     if ($_GET['O'] == 'u') {
-        $union = array_merge(initArray($db, $_GET['A']), initArray($db, $_GET['B']));
-        return $union;
+        $merge = array_merge($A, $B);
+        $result = array_unique($merge, SORT_REGULAR);
     } else if ($_GET['O'] == 'i') {
-        $intersection = array_intersect(initArray($db, $_GET['A']), initArray($db, $_GET['B']));
-        return $intersection;
+        foreach ($A as $a) {
+            foreach ($B as $b) {
+                if ($a == $b) {
+                    $result[] = $a;
+                }
+            }
+        }
     }
+    return $result;
+}
+
+function insertArray($db, $array)
+{
+    $query = $db->prepare("INSERT INTO insiemi (valore, insieme) VALUES (?, ?)");
+    $set = getMaxSet($db) + 1;
+    foreach ($array as $value) {
+        $query->bind_param('ii', $value['valore'], $set);
+        $query->execute();
+    }
+}
+
+function getMaxSet($db)
+{
+    $query = $db->prepare("SELECT MAX(insieme) FROM insiemi");
+    $query->execute();
+    return $query->get_result()->fetch_row()[0];
 }
 
 var_dump(createNewArray($db));
