@@ -11,13 +11,13 @@ function checkValidity($db)
     if (!isset($_GET['A'], $_GET['B'], $_GET['O'])) {
         return false;
     }
-    if (getSetCount($db, $_GET['A']) == 0) {
+    if (getSetCount($db, $_GET['A']) === 0) {
         return false;
     }
-    if (getSetCount($db, $_GET['B']) == 0) {
+    if (getSetCount($db, $_GET['B']) === 0) {
         return false;
     }
-    if (($_GET['O'] != 'i') or ($_GET['O'] != 'u')) {
+    if (($_GET['O'] != 'i') and ($_GET['O'] != 'u')) {
         return false;
     }
     return true;
@@ -49,13 +49,13 @@ function createNewArray($db)
     $A = initArray($db, $_GET['A']);
     $B = initArray($db, $_GET['B']);
     $result = array();
-    if ($_GET['O'] == 'u') {
+    if ($_GET['O'] === 'u') {
         $merge = array_merge($A, $B);
         $result = array_unique($merge, SORT_REGULAR);
-    } else if ($_GET['O'] == 'i') {
+    } else if ($_GET['O'] === 'i') {
         foreach ($A as $a) {
             foreach ($B as $b) {
-                if ($a == $b) {
+                if ($a === $b) {
                     $result[] = $a;
                 }
             }
@@ -80,8 +80,6 @@ function getMaxSet($db)
     $query->execute();
     return $query->get_result()->fetch_row()[0];
 }
-
-var_dump(checkValidity($db));
 
 if (checkValidity($db)) {
     $array = createNewArray($db);
