@@ -31,19 +31,6 @@ function getSetCount($db, $var)
     return $query->get_result()->fetch_row()[0];
 }
 
-function initArray($db, $var)
-{
-    $query = $db->prepare("SELECT valore FROM insiemi WHERE insieme = ?");
-    $query->bind_param('i', $var);
-    $query->execute();
-    $result = $query->get_result();
-    $array = array();
-    while ($row = $result->fetch_row()) {
-        $array[] = $row[0];
-    }
-    return $array;
-}
-
 function createNewArray($db)
 {
     $A = initArray($db, $_GET['A']);
@@ -62,6 +49,19 @@ function createNewArray($db)
         }
     }
     return $result;
+}
+
+function initArray($db, $var)
+{
+    $query = $db->prepare("SELECT valore FROM insiemi WHERE insieme = ?");
+    $query->bind_param('i', $var);
+    $query->execute();
+    $result = $query->get_result();
+    $array = array();
+    while ($row = $result->fetch_row()) {
+        $array[] = $row[0];
+    }
+    return $array;
 }
 
 function insertArray($db, $array)
