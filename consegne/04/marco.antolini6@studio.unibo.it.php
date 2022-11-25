@@ -6,14 +6,6 @@ if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
 
-function getSetCount($db, $var)
-{
-    $query = $db->prepare("SELECT COUNT(*) FROM insiemi WHERE insieme = ?");
-    $query->bind_param('i', $var);
-    $query->execute();
-    return $query->get_result()->fetch_row()[0];
-}
-
 function checkValidity($db)
 {
     if (!isset($_GET['A'], $_GET['B'], $_GET['O'])) {
@@ -31,12 +23,25 @@ function checkValidity($db)
     return true;
 }
 
+function getSetCount($db, $var)
+{
+    $query = $db->prepare("SELECT COUNT(*) FROM insiemi WHERE insieme = ?");
+    $query->bind_param('i', $var);
+    $query->execute();
+    return $query->get_result()->fetch_row()[0];
+}
+
 function initArray($db, $var)
 {
     $query = $db->prepare("SELECT valore FROM insiemi WHERE insieme = ?");
     $query->bind_param('i', $var);
     $query->execute();
-    return $query->get_result()->fetch_all(MYSQLI_ASSOC);
+    $result = $query->get_result();
+    $array = array();
+    while ($row = $result->fetch_row()) {
+        $array[] = $row[0];
+    }
+    return $array;
 }
 
 function createNewArray($db)
@@ -64,7 +69,7 @@ function insertArray($db, $array)
     $query = $db->prepare("INSERT INTO insiemi (valore, insieme) VALUES (?, ?)");
     $set = getMaxSet($db) + 1;
     foreach ($array as $value) {
-        $query->bind_param('ii', $value['valore'], $set);
+        $query->bind_param('ii', $value, $set);
         $query->execute();
     }
 }
@@ -76,4 +81,11 @@ function getMaxSet($db)
     return $query->get_result()->fetch_row()[0];
 }
 
-var_dump(createNewArray($db));
+var_dump(checkValidity($db));
+
+if (checkValidity($db)) {
+    $array = createNewArray($db);
+    insertArray($db, $array);
+} else {
+    echo "Invalid input";
+}
