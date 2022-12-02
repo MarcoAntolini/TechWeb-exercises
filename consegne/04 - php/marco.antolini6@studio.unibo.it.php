@@ -56,12 +56,8 @@ function initArray($db, $var)
     $query = $db->prepare("SELECT valore FROM insiemi WHERE insieme = ?");
     $query->bind_param('i', $var);
     $query->execute();
-    $result = $query->get_result();
-    $array = array();
-    while ($row = $result->fetch_row()) {
-        $array[] = $row[0];
-    }
-    return $array;
+    $result = $query->get_result()->fetch_all(MYSQLI_ASSOC);
+    return array_column($result, 'valore');
 }
 
 function insertArray($db, $array)
