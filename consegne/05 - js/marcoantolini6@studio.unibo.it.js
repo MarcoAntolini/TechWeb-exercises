@@ -1,12 +1,9 @@
 var images = document.querySelectorAll("img");
 
-function hideAllImages() {
+function loadPage() {
     for (var i = 2; i < images.length; i++) {
         images[i].style.visibility = "hidden";
     }
-}
-
-function addClassToFirst() {
     images[0].className = "current";
 }
 
@@ -15,32 +12,27 @@ function imageClickHandler() {
         images[i].onclick = function () {
             if (this.className != "current") {
                 this.className = "current";
+                this.style.visibility = "visible";
                 for (var j = 0; j < images.length; j++) {
                     if (images[j] != this) {
                         images[j].removeAttribute("class");
                         images[j].style.visibility = "hidden";
                     }
                 }
-                showCurrentImage(this);
+                var p = this.previousElementSibling;
+                var n = this.nextElementSibling;
+                if (p) {
+                    p.style.visibility = "visible";
+                }
+                if (n) {
+                    n.style.visibility = "visible";
+                }
             }
         };
     }
 }
 
-function showCurrentImage(img) {
-    img.style.visibility = "visible";
-    var p = img.previousElementSibling;
-    var n = img.nextElementSibling;
-    if (p) {
-        p.style.visibility = "visible";
-    }
-    if (n) {
-        n.style.visibility = "visible";
-    }
-}
-
 window.onload = function () {
-    hideAllImages();
-    addClassToFirst();
+    loadPage();
 };
 imageClickHandler();
