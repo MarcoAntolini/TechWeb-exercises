@@ -1,0 +1,78 @@
+body
+{
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 2% 0px 2% 0px;
+  color: white;
+  display: block;
+  border-bottom: solid red 2px;
+  background: -webkit-linear-gradient(darkorange, orange, red); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(darkorange, orange, red); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(darkorange, orange, red); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(darkorange, orange, red); /* Standard syntax */
+}
+
+p {
+  text-align: left;
+  color: black;
+}
+
+
+
+section{
+  display: block;
+  width: 70%;
+  float: left;
+  margin: 1%;
+  padding: 1%;
+}
+
+nav {
+  display: block;
+  float: left;
+  width: 20%;
+  padding: 1%;
+  margin: 1%;
+}
+
+ul {
+  text-align: right;
+  list-style-type: none;
+}
+
+li{
+  line-height: 2em;
+}
+
+li a:hover {
+  background-color: darkorange;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1%;
+}
+
+footer {
+  font-size: 80%;
+  width: 100%;
+  margin: 0px;
+  padding: 1% 0px 1% 0px;
+  display: block;
+  border-top: solid red 2px;
+  background: -webkit-linear-gradient(red, orange, darkorange); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, orange, darkorange); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, orange, darkorange); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(red, orange, darkorange); /* Standard syntax */
+  clear: both;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}

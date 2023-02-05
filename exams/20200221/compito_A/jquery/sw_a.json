@@ -1,0 +1,40 @@
+[{
+	"nome": "Luke Skywalker",
+	"email": "luke.skywalker@jediorder.uni",
+	"colore_preferito": "#ffffff",
+	"colore_capelli": "biondi",
+	"colore_occhi": "blu",
+	"genere": "maschio"
+},
+{
+	"nome": "Chewbecca",
+	"email": "chewbecca@wookiee.uni",
+	"colore_preferito": "#654321",
+	"colore_capelli": "marrone",
+	"colore_occhi": "blu",
+	"genere": "maschio"
+},
+{
+	"nome": "Jar Jar Binks",
+	"email": "jjbinks@gungan.uni",
+	"colore_preferito": "#F44611",
+	"colore_capelli": "nessuno",
+	"colore_occhi": "arancione",
+	"genere": "maschio"
+},
+{
+	"nome": "Mace Windu",
+	"email": "mace.windu@jediorder.uni",
+	"colore_preferito": "#8f00ff",
+	"colore_capelli": "nessuno",
+	"colore_occhi": "marrone",
+	"genere": "maschio"
+},
+{
+	"nome": "Leila Organa",
+	"email": "general@resistance.uni",
+	"colore_preferito": "#ffffff",
+	"colore_capelli": "marrone",
+	"colore_occhi": "marrone",
+	"genere": "femmina"
+}]

@@ -1,0 +1,35 @@
+[{
+	"nome": "Luke Skywalker",
+	"altezza": "172",
+	"peso": "77",
+	"email": "luke.skywalker@jediorder.uni",
+	"genere": "maschio"
+},
+{
+	"nome": "Chewbecca",
+	"altezza": "228",
+	"peso": "112",
+	"email": "chewbecca@wookiee.uni",
+	"genere": "maschio"
+},
+{
+	"nome": "Jar Jar Binks",
+	"altezza": "196",
+	"peso": "66",
+	"email": "jjbinks@gungan.uni",
+	"genere": "maschio"
+},
+{
+	"nome": "Mace Windu",
+	"altezza": "188",
+	"peso": "84",
+	"email": "mace.windu@jediorder.uni",
+	"genere": "maschio"
+},
+{
+	"nome": "Leila Organa",
+	"altezza": "150",
+	"peso": "49",
+	"email": "general@resistance.uni",
+	"genere": "femmina"
+}]

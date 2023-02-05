@@ -1,0 +1,78 @@
+body
+{
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 2% 0px 2% 0px;
+  color: darkblue;
+  display: block;
+  border-bottom: solid blue 2px;
+  background: -webkit-linear-gradient(left, green, lightgreen, blue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, green, lightgreen, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, green, lightgreen, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(left, green, lightgreen, blue); /* Standard syntax */
+}
+
+p {
+  text-align: center;
+  color: black;
+}
+
+
+
+section{
+  display: block;
+  width: 80%;
+  float: right;
+  margin: 1%;
+  padding: 1%;
+}
+
+nav {
+  display: block;
+  float: right;
+  width: 10%;
+  margin: 1%;
+  padding: 1%;
+}
+
+ul {
+  text-align: left;
+  list-style-type: circle;
+}
+
+li{
+  line-height: 2em;
+}
+
+li a:hover {
+  background-color: darkblue;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1%;
+}
+
+footer {
+  font-size: 80%;
+  width: 100%;
+  margin: 0px;
+  padding: 1% 0px 1% 0px;
+  display: block;
+  border-top: solid blue 2px;
+  background: -webkit-linear-gradient(right, green, lightgreen, blue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, green, lightgreen, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, green, lightgreen, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(right, green, lightgreen, blue); /* Standard syntax */
+  clear: both;
+}
+
+footer p {
+  text-align: right;
+  color: darkblue;
+}
