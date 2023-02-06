@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Compito A</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <form action="#" method="get">
+        <!-- <select name="titolo" id="titolo">
+            <option value="" selected disabled hidden>Titolo</option>
+            <option value="Sistemi Operativi">Sistemi operativi. Concetti ed esempi, di Abraham Silberschatz et al.</option>
+            <option value="Linguaggi di programmazione">Linguaggi di programmazione. Principi e paradigmi, di Maurizio Gabbrielli e Simone Martini</option>
+            <option value="Moderni sistemi operativi">I moderni sistemi operativi, di Andrew Tanenbaum</option>
+            <option value="Fondamenti reti di calcolatori">Fondamenti di reti di calcolatori, di Andrew Tanenbaum</option>
+        </select>
+        <select name="formato" id="formato">
+            <option value="" selected disabled hidden>Formato</option>
+            <option value="Copertina flessibile">Copertina flessibile</option>
+            <option value="Copertina rigida">Copertina rigida</option>
+            <option value="Formato elettronico">Formato elettronico</option>
+        </select> -->
+        <fieldset>
+            <legend>Titolo</legend>
+            <input type="radio" name="titolo" id="sistemi-operativi" value="Sistemi Operativi">
+            <label for="sistemi-operativi">Sistemi operativi. Concetti ed esempi, di Abraham Silberschatz et al.</label>
+            <br>
+            <input type="radio" name="titolo" id="linguaggi-di-programmazione" value="Linguaggi di programmazione">
+            <label for="linguaggi-di-programmazione">Linguaggi di programmazione. Principi e paradigmi, di Maurizio Gabbrielli e Simone Martini</label>
+            <br>
+            <input type="radio" name="titolo" id="moderni-sistemi-operativi" value="Moderni sistemi operativi">
+            <label for="moderni-sistemi-operativi">I moderni sistemi operativi, di Andrew Tanenbaum</label>
+            <br>
+            <input type="radio" name="titolo" id="fondamenti-reti-di-calcolatori" value="Fondamenti reti di calcolatori">
+            <label for="fondamenti-reti-di-calcolatori">Fondamenti di reti di calcolatori, di Andrew Tanenbaum</label>
+        </fieldset>
+        <fieldset>
+            <legend>Formato</legend>
+            <input type="radio" name="formato" id="copertina-flessibile" value="Copertina flessibile">
+            <label for="copertina-flessibile">Copertina flessibile</label>
+            <input type="radio" name="formato" id="copertina-rigida" value="Copertina rigida">
+            <label for="copertina-rigida">Copertina rigida</label>
+            <input type="radio" name="formato" id="formato-elettronico" value="Formato elettronico">
+            <label for="formato-elettronico">Formato elettronico</label>
+        </fieldset>
+        <div id="consegna">
+            <input type="text" name="nome" id="nome" placeholder="Nome">
+            <input type="text" name="cognome" id="cognome" placeholder="Cognome">
+            <input type="text" name="via" id="via" placeholder="Via">
+            <input type="text" name="indirizzo" id="indirizzo" placeholder="Numero civico">
+            <input type="text" name="città" id="città" placeholder="Città">
+            <input type="text" name="provincia" id="provincia" placeholder="Provincia">
+            <input type="number" name="cap" id="cap" placeholder="CAP" min="0">
+            <fieldset>
+                <legend>Orario flessibile</legend>
+                <input type="radio" name="orario" id="orario-si" value="Sì">
+                <label for="orario-si">Sì</label>
+                <input type="radio" name="orario" id="orario-no" value="No">
+                <label for="orario-no">No</label>
+            </fieldset>
+        </div>
+        <input type="checkbox" name="pagamento-consegna" id="pagamento-consegna">
+        <label for="pagamento-consegna">Pagamento alla consegna</label>
+        <br>
+        <input type="submit" value="Invia">
+        <input type="reset" value="Annulla">
+    </form>
+</body>
+
+</html>
