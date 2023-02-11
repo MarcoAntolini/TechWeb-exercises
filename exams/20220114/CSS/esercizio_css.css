@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+header {
+    border: 2px dotted darkgreen;
+    box-shadow: 5px 5px 5px grey;
+    background-color: lightgreen;
+}
+
+h1 {
+    font-weight: bold;
+    color: darkgreen;
+    text-align: center;
+
+}
+
+nav {
+    width: 20%;
+    float: right;
+    border: 2px dotted darkgreen;
+    box-shadow: 5px 5px 5px grey;
+    background-color: lightgreen;
+    margin-top: .5rem;
+}
+
+section {
+    width: 75%;
+}
+
+footer {
+    clear: both;
+    border: 2px dotted darkgreen;
+    box-shadow: 5px 5px 5px grey;
+    background-color: lightgreen;
+}
+
+footer p {
+    text-align: center;
+    color: black;
+}
