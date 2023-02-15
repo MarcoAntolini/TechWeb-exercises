@@ -1,0 +1,40 @@
+nav {
+    float: right;
+    width: 20%;
+    border: 2px solid darkgreen;
+}
+
+nav ul li {
+    list-style-type: circle;
+    line-height: 2em;
+}
+
+nav a:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+header {
+    width: 70%;
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
+    color: black;
+    box-shadow: 10px 10px 5px darkgreen;
+    text-align: center;
+}
+
+section {
+    width: 70%;
+    color: black;
+    justify-content: start;
+    margin: 2.5rem .5rem;
+}
+
+footer {
+    width: 70%;
+    border: 2px solid darkgreen;
+    text-align: center;
+    color: darkgreen;
+    font-size: .75rem;
+    box-shadow: 10px 10px 5px darkgreen;
+}
