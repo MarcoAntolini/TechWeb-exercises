@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<title>Esame</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Anagrafica</legend>
+				<label for="nome">Nome:</label>
+				<input type="text" name="nome" id="nome" />
+				<label for="cognome">Cognome:</label>
+				<input type="text" name="cognome" id="cognome" />
+				<label for="anno">Anno di nascita:</label>
+				<input type="date" name="anno" id="anno" />
+			</fieldset>
+			<fieldset>
+				<legend>Prenotazione</legend>
+				<span>Tipo:</span>
+				<input type="checkbox" name="tipo" id="tampone" />
+				<label for="tampone">Tampone</label>
+				<input type="checkbox" name="tipo" id="sierologico" />
+				<label for="sierologico">Sierologico</label>
+				<input type="checkbox" name="tipo" id="vaccino" />
+				<label for="vaccino">Vaccino</label>
+				<br />
+				<span>Luogo:</span>
+				<input type="radio" name="luogo" id="farmacia" />
+				<label for="farmacia">Farmacia</label>
+				<input type="radio" name="luogo" id="medico" />
+				<label for="medico">Medico di famiglia</label>
+				<input type="radio" name="luogo" id="ambulatorio" />
+				<label for="ambulatorio">Ambulatorio</label>
+				<input type="radio" name="luogo" id="ospedale" />
+				<label for="ospedale">Ospedale</label>
+			</fieldset>
+			<button type="reset">Reset</button>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
