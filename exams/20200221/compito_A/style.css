@@ -1,0 +1,63 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+h1 {
+	text-decoration: overline underline;
+	margin-left: 20vw;
+}
+
+form {
+	display: flex;
+	justify-content: space-between;
+}
+
+fieldset {
+	border: 2px dotted blue;
+	min-width: 45vw;
+}
+
+fieldset:nth-child(1) {
+	display: flex;
+	flex-direction: column;
+	order: 1;
+	align-items: center;
+}
+
+fieldset:nth-child(1) input {
+	width: 100%;
+}
+
+fieldset:nth-child(2) input[type="radio"] {
+	margin: 0 2rem 0 0;
+}
+
+fieldset:nth-child(2) label:not([for="colore-picker"]) {
+	margin-right: calc(100% - 6rem);
+}
+
+input[type="submit"] {
+	transform: rotate(-10deg);
+	text-decoration: overline;
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	min-width: 50vw;
+	height: fit-content;
+	padding: 1rem 0;
+	order: 2;
+	position: absolute;
+	top: 20rem;
+	right: 0;
+}
+
+input[type="submit"]:hover {
+	color: black;
+	background-color: yellow;
+	transition: 3s;
+}
